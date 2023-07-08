@@ -19,3 +19,39 @@
 合并分支：git merge
 
 查看日志：git log    按Q退出
+
+查看更精简的日志：git log --oneline
+
+显示关联远程库的名称：git remote show
+
+远程仓库名称重命名：git remote rename 旧名称 新名称
+
+移除已关联的远程仓库：git remote remove 远程库名称
+
+查看文件修改了哪些内容：git diff 文件名.后缀
+
+提交修正：git commit --amend	对前一次的提交信息做修改，并且不会增加新的提交记录
+
+## 关联远程
+
+![img](https://cdn.nlark.com/yuque/0/2023/png/29743347/1688795285889-a2f2d835-a75f-423d-8785-3058d7d15a30.png)
+
+git remote add origin https://github.com/rendong2001/gitStudy.git
+
+拆解：使用 git remote add 命令，将远程库和本地关联到一起，origin(远程库名称)，https://github.com/rendong2001/gitStudy.git(远程库地址)
+
+git push -u origin main
+
+拆解：向远程推送，-u将本地分支上传并合并到远程分支，origin(远程库名称) main(要推送的分支)，之后提交命令可以简化为 git push
+
+**可以关联多个远程**
+
+![img](https://cdn.nlark.com/yuque/0/2023/png/29743347/1688797231920-c3b163d5-17c6-4f7d-a1a0-6c9493b12044.png)
+
+git remote add origin https://gitee.com/rendongc/git-study.git
+
+解析：执行这个命令管理 gitee 的远程库，但是库名不能再用 origin 了，因为 github 的远程库名已经是这个
+
+git push -u origin "master"
+
+解析：那么再次向 gitee 远程推送的时候，就能使用这个命令。而是 git push 远程仓库名 要推送的分支
