@@ -99,3 +99,25 @@ git log --before='4 week ago'		git log --before='1 month ago'
 向远程仓库推送：git push 远程仓库名称 分支名称	git push 远程仓库名称 --all  推送本地所有分支
 
 删除远程仓库分支：git push 远程仓库名称 -d 远程分支名称
+
+## 标签
+
+查看标签：git tag	git tag --online
+
+查看标签的详细信息：git show 标签名称
+
+轻量化创建标签：git tag 标签名称
+
+注释标签：git tag  标签名称 -a -m 备注信息
+
+为指定提交打标签：git tag 标签名称 commitId
+
+为指定提交打标签（另加注释信息）：git tag 标签名称 -a -m 备注信息 commitId		a：annotate（注释）
+
+删除标签（本地）：git tag -d 标签名称
+
+删除标签（远程）：git push 远程仓库名称 -d  标签名称
+
+推送标签：git push 远程仓库名称 标签名称		在后边追加标签名称可推送多个标签
+
+推送所有标签：git push 远程仓库名称 --tags
