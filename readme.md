@@ -91,3 +91,11 @@ git log --before='4 week ago'		git log --before='1 month ago'
 普通日志是版本库的一部分，可以随着版本库被 push
 
 引用日志只保存在本地
+
+## 分支管理
+
+查看所有分支：git branch -a	包括远程仓库的分支
+
+向远程仓库推送：git push 远程仓库名称 分支名称	git push 远程仓库名称 --all  推送本地所有分支
+
+删除远程仓库分支：git push 远程仓库名称 -d 远程分支名称
