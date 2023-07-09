@@ -34,6 +34,14 @@
 
 提交修正：git commit --amend	对前一次的提交信息做修改，并且不会增加新的提交记录
 
+## 恢复文件
+
+未 add ：git checkout 文件名
+
+已 add 未 commit ：git checkout commitId 文件名
+
+已 commit ：git checkout commitId 文件名
+
 ## 关联远程
 
 ![img](https://cdn.nlark.com/yuque/0/2023/png/29743347/1688795285889-a2f2d835-a75f-423d-8785-3058d7d15a30.png)
@@ -121,3 +129,13 @@ git log --before='4 week ago'		git log --before='1 month ago'
 推送标签：git push 远程仓库名称 标签名称		在后边追加标签名称可推送多个标签
 
 推送所有标签：git push 远程仓库名称 --tags
+
+## 附：
+
+### 创建 github 托管的web网站
+
+通过 new organization 创建组织，要部署的仓库，其仓库名的格式为 "账户名称.github.io" 或 "组织名称.github.io"
+
+### git 工作图
+
+![img](https://cdn.nlark.com/yuque/0/2023/png/29743347/1688915507846-67474eeb-5b8c-4cf4-a1ff-76c2665b755f.png)
