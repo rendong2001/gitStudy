@@ -40,7 +40,7 @@
 
 已 add 未 commit ：git checkout commitId 文件名
 
-已 commit ：git checkout commitId 文件名
+已 commit ：git checkout commitId 文件名	git log 日志依然存在(不建议使用)
 
 ## 关联远程
 
@@ -129,6 +129,20 @@ git log --before='4 week ago'		git log --before='1 month ago'
 推送标签：git push 远程仓库名称 标签名称		在后边追加标签名称可推送多个标签
 
 推送所有标签：git push 远程仓库名称 --tags
+
+## 代码回滚
+
+删除工作区改动代码，撤销 commit，撤销 add ：git reset --hard HEAD~n
+
+工作区改动代码不变，撤销 commit，撤销 add：git reset --mixed HEAD~n
+
+工作区改动代码不变，撤销 commit，不撤销 add：git reset --soft HEAD~n
+
+**回退代码**
+
+撤销 add 操作：git restore --staged 文件名
+
+撤销工作区的修改内容：git restore 文件名
 
 ## 附：
 
